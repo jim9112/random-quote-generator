@@ -13,7 +13,7 @@ var quotes = [{
         retrieved: 'https://www.brainyquote.com/quotes/aristotle_119068?src=t_inspirational',
     },
     {
-        quote: '“Only thing we have to fear, is fear itself”',
+        quote: 'Only thing we have to fear, is fear itself',
         source: 'Franklin D. Roosevelt',
         citation: 'FDR’s First Inaugural Address',
         year: '1933',
