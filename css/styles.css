@@ -56,6 +56,10 @@ body {
   content: ", ";
   font-style: normal;
 }
+.retrieved-from {
+  margin-top: 20px;
+  text-align: center;
+}
 
 #loadQuote {
   position: fixed;
