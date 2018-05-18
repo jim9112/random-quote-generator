@@ -2,6 +2,9 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+// changes quote and background color every 30 seconds automatically
+var intervalID = window.setInterval(printQuote, 30000);
+
 // call printQuote function so page loads with a quote
 printQuote();
 
@@ -15,16 +18,19 @@ function getRandomQuote(quote) {
     var quote = quotes[randomNum()];
     return quote;
 }
+
+// random number generator for rgb colors
 function randomColorNum() {
     return Math.floor(Math.random() * 256 );
 }
+
+// random color generator for background
 function randomColor() {
  var color1 = randomColorNum();
  var color2 = randomColorNum();
  var color3 = randomColorNum();   
  document.body.style.backgroundColor = "rgb(" + color1+","+ color2+","+ color3+")";
  document.getElementById("loadQuote").style.backgroundColor = "rgb(" + color1+","+ color2+","+ color3+")";
- console.log(color1);
 }
 
 // function to print quote
@@ -39,9 +45,11 @@ function printQuote() {
     }
 
     // displays year of quote if available
-    if (quoteToPrint.date.length > 0) {
-        display += '<span class="year">' + quoteToPrint.date + '</span>'
+    if (quoteToPrint.year.length > 0) {
+        display += '<span class="year">' + quoteToPrint.year + '</span>'
     }
+
+    // close paragraph statement
     display += '</p>';
 
     // displays a link to where the quote was found if available
@@ -51,6 +59,6 @@ function printQuote() {
     var div = document.getElementById('quote-box');
     div.innerHTML = display;
 
+    // calls function to change background color
     randomColor();
 }
-// document.body.style.backgroundColor = "red";
