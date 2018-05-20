@@ -10,7 +10,7 @@ printQuote();
 
 // generate a random number between 1 and 4 ( didnt add +1 at end so I could get 0 as an option)
 function randomNum() {
-    return Math.floor(Math.random() * 5);
+    return Math.floor(Math.random() * quotes.length);
 }
 
 // pull random quote

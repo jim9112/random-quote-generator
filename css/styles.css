@@ -62,7 +62,7 @@ body {
 }
 
 #loadQuote {
-  position: fixed;
+  position: absolute;
   width: 12em;
   display: inline-block;
   left: 50%;
